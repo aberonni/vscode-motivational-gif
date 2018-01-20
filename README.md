@@ -8,7 +8,7 @@ Sometimes you just need a little push to get through the day.
 
 When you are feeling down and low, just open the VSCode command palette and type `motivateMe` to get a little dose of motivation.
 
-![Demonstration](src/assets/demo.gif)
+![Demonstration](images/demo.gif)
 
 ## Extension Settings
 

@@ -59,7 +59,7 @@
         "@types/node": "^7.0.43",
         "@types/mocha": "^2.2.42"
     },
-    "icon": "src/assets/icon.jpg",
+    "icon": "images/icon.jpg",
     "galleryBanner": {
         "color": "#2eaf69",
         "theme": "light"
