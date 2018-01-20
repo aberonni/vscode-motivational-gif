@@ -1,0 +1,67 @@
+{
+    "name": "vscode-motivational-gif",
+    "displayName": "VSCode Motivational GIF",
+    "description": "Motivational GIF - Sometimes you just need a little push to get through the day.",
+    "version": "1.0.0",
+    "license":"SEE LICENSE IN LICENSE.txt",
+    "homepage": "https://github.com/aberonni/vscode-motivational-gif",
+    "bugs": {
+        "url": "https://github.com/aberonni/vscode-motivational-gif/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/aberonni/vscode-motivational-gif.git"
+    },
+    "publisher": "aberonni",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "gif",
+        "giphy",
+        "motivation",
+        "motivational"
+    ],
+    "activationEvents": [
+        "onCommand:extension.motivateMe"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.motivateMe",
+                "title": "Motivate Me"
+            }
+        ],
+        "configuration": {
+            "properties": {
+                "motivateMe.gifLibrary": {
+                    "type": "array",
+                    "default": [],
+                    "description": "Set this in order to use a custom set of gifs instead of random ones."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    },
+    "icon": "src/assets/icon.jpg",
+    "galleryBanner": {
+        "color": "#2eaf69",
+        "theme": "light"
+    }
+}
