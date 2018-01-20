@@ -2,6 +2,8 @@
 
 Sometimes you just need a little push to get through the day.
 
+[Link to VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=aberonni.vscode-motivational-gif)
+
 ![Powered by GIPHY](src/assets/powered-by.gif)
 
 ## Features
