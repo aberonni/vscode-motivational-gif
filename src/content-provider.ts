@@ -15,8 +15,8 @@ export default class TextDocumentContentProvider implements vscode.TextDocumentC
     private context: vscode.ExtensionContext;
     private gifLibrary: Array<string>;
 
-    private getAsset(asset: string): string {
-        return this.context.asAbsolutePath(path.join('src', 'assets', asset)).split('\\').join('/');
+    private getImage(image: string): string {
+        return this.context.asAbsolutePath(path.join('images', image));
     }
 
     private getGifFromLibrary(): string {
@@ -51,7 +51,7 @@ export default class TextDocumentContentProvider implements vscode.TextDocumentC
                     } catch (e) {
                         // otherwise use fallback gif
                         data = {
-                            image_original_url: '${this.getAsset('fallback.gif')}',
+                            image_original_url: '${this.getImage('fallback.gif')}',
                             url: 'https://giphy.com/gifs/reaction-qDPg6HNz2NfAk'
                         }
                     }
@@ -77,7 +77,7 @@ export default class TextDocumentContentProvider implements vscode.TextDocumentC
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    background-image: url('${this.getAsset('spinner.gif')}');
+                    background-image: url('${this.getImage('spinner.gif')}');
                     background-position: 50% 50%;
                     background-size: 30px;
                     background-repeat: no-repeat;
@@ -100,7 +100,7 @@ export default class TextDocumentContentProvider implements vscode.TextDocumentC
             </style>
             <body>
                 <a href="http://giphy.com" id="powered-by">
-                    <img src="${this.getAsset('powered-by.gif')}" />
+                    <img src="${this.getImage('powered-by.gif')}" crossorigin="anonymous" />
                 </a>
                 <img id="gif" />
                 <a id="gif-link">Open GIF in browser</a>
