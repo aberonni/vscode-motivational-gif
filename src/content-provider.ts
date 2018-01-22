@@ -1,3 +1,4 @@
+import * as os from "os";
 import * as path from "path";
 import * as vscode from 'vscode';
 import { WorkspaceConfiguration } from "vscode";
@@ -16,7 +17,15 @@ export default class TextDocumentContentProvider implements vscode.TextDocumentC
     private gifLibrary: Array<string>;
 
     private getImage(image: string): string {
-        return this.context.asAbsolutePath(path.join('images', image));
+        let imagePath = this.context.asAbsolutePath(path.join('images', image));
+
+        if (os.type() === 'WINDOWS_NT') {
+            imagePath = imagePath.split('\\').join('/');
+        } else {
+            imagePath = `file://${imagePath}`;
+        }
+
+        return imagePath;
     }
 
     private getGifFromLibrary(): string {
