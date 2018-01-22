@@ -2,7 +2,7 @@
     "name": "vscode-motivational-gif",
     "displayName": "VSCode Motivational GIF",
     "description": "Motivational GIF - Sometimes you just need a little push to get through the day.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": "SEE LICENSE IN LICENSE.txt",
     "homepage": "https://github.com/aberonni/vscode-motivational-gif",
     "bugs": {
